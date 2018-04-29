@@ -16,7 +16,7 @@ public class MainBungaFlatSQL {
 
     public static Connection getKoneksiKeDB() throws SQLException {
         String username = "sa";
-        String URL = "jdbc:sqlserver://localhost;databaseName=JBDC_BungaFlat;instanceName=SQLEXPRESS2017";
+        String URL = "jdbc:sqlserver://localhost;databaseName=JDBC_BungaFlat;instanceName=SQLEXPRESS2017";
         String password = "16agustus1994";
         return DriverManager.getConnection(URL, username, password);
     }
@@ -27,6 +27,8 @@ public class MainBungaFlatSQL {
         NasabahService serviceNasabah = new NasabahService();
         
         //Input data nasabah
+        System.out.println("Masukan ID Nasabah : ");
+        bunga.setIdNasabah(input.nextInt());
         System.out.println("Masukan Nama Nasabah : ");
         bunga.setNamaNasabah(input.next());
         System.out.println("Masukan Jumlah Pinjaman : ");

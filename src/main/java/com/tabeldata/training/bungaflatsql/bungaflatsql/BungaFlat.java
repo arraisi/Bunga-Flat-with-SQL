@@ -14,6 +14,15 @@ public class BungaFlat {
     private float PokokAngsuran;
     private float kali;
     private float sukuBunga;
+    private int idNasabah;
+
+    public int getIdNasabah() {
+        return idNasabah;
+    }
+
+    public void setIdNasabah(int idNasabah) {
+        this.idNasabah = idNasabah;
+    }
     
     
     
@@ -51,7 +60,7 @@ public class BungaFlat {
     }
 
     public void Bunga() {
-        Bunga = Sisa * (((float) sukuBunga / 100) / 12);
+        Bunga = Sisa * (((float) sukuBunga / 100) / kali);
     }
 
     public void Angsuran() {
